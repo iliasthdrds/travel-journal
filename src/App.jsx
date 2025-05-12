@@ -1,13 +1,33 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Card from './components/Card';
+import Data from './components/Data';
+
+
 
 export default function App() {
-  return (
-    
-  <div>
-      <Navbar /> {/* Εδώ προσθέτεις το Navbar */}
-      <h1>Hello from App</h1>
-    </div>
-  )
+ 
+ const cardElements = Data.map(item => {
+        return( 
+            <Card
+            key={item.id}
+            {...item}
+            />
+        )
+    })
+ 
+ 
+  return ( 
+        <div>
+        <Navbar />
+        <section className="cards-list">
+        {cardElements}
+        </section>
+        </div>
+    )
 }
-
+ 
+ 
+ 
+ 
+ 

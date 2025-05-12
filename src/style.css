@@ -26,3 +26,23 @@ nav{
     font-weight: 500;
     letter-spacing: -7.5%;
 }
+
+.card--image{
+    display: flex;
+position: relative;
+border-radius: 5px;
+width: 125px;
+height: 168px;
+left: 40px;
+top: 45px;
+margin-bottom: 36px;
+    
+}
+
+.card--loc{
+    position: relative;
+    flex-direction:column;
+    margin-left: 184px;
+    width: 7px;
+    
+}
