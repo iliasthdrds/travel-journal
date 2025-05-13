@@ -7,11 +7,12 @@ import Data from './components/Data';
 
 export default function App() {
  
- const cardElements = Data.map(item => {
+ const cardElements = Data.map((item, index)=> {
         return( 
             <Card
             key={item.id}
             {...item}
+            isLast={index === Data.length - 1}
             />
         )
     })
@@ -20,14 +21,9 @@ export default function App() {
   return ( 
         <div>
         <Navbar />
-        <section className="cards-list">
+        <section className="cards--list">
         {cardElements}
         </section>
         </div>
     )
 }
- 
- 
- 
- 
- 
